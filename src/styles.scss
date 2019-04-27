@@ -1,15 +1,22 @@
+/*archivos externos*/
+@import 'css/icomoon/fonts.css';
 /*globales*/
 @import 'css/variables';
 @import 'css/mixins';
 /*componentes*/
+@import 'css/main';
+@import 'css/aside';
 @import 'css/header';
 @import 'css/section';
 @import 'css/footer';
 
+*{
+    box-sizing: border-box; 
+}
 body{
+    @include reset();
     background: rgb(200, 224, 233);
     font-family: Arial, Helvetica, sans-serif;
-    @include reset();
 }
 
 a{

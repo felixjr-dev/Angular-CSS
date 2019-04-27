@@ -1,0 +1,30 @@
+.aside{
+    grid-area: aside;
+    .nav{
+        .list{
+            @include reset();
+            list-style-type: none;
+            .list-item{
+
+                .list-item-link{
+                    display: block;
+                    border-bottom: 1px #ccd3f5 solid;
+                    color:$links;
+                    padding:  10px 20px;
+                    transition: background 1s;
+                }
+                .list-item-link:hover{
+                    background: #e8edf5;
+                }
+            }
+            
+        }
+    }
+    
+}
+
+@include mobile{
+    .aside{
+        display: none;
+    }
+}

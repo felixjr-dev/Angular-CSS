@@ -1,38 +1,29 @@
 .section{
-    height: 100vh;
-    .container{
-        min-height: 100%;
-        position: relative;
-        .box{
-            background: #FFF;
-            bottom: 86px;
-            padding: 64px 52px 30px 52px;
-            position: absolute;
-            top:45px;
-            width: 380px;
-            .box-title{
-                @include reset();
-                font-size: 38px;
-            }
-            .box-text{
-                @include reset();
-                font-size: 18px;
-                line-height: 30px;
-            }
-        }
-        .box-right{
-            right: 0;
-        }
-        .box-left{
-            left: 0;
+    grid-area: section;
+    height: calc(100vh - 150px);
+    overflow-y: scroll;
+    .image-list{
+        @include reset();
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        .image-list-item{
+            @include reset();
         }
     }
     
 }
-.section-one{
-    padding-top: 45px;
-}
 
-.section-one, .section-two{
-    background: linear-gradient(rgb(180, 210, 248),rgb(176, 194, 243))
+@include mobile{
+    .section{
+        height: auto;
+        .image-list{
+            flex-flow: column;
+            .image-list-item{
+                .image{
+                    max-width: 100px;
+                }
+            }
+        }
+    }
 }
